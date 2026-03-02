@@ -7,6 +7,13 @@ import java.util.Optional;
 public class OptionalDemo1 {
 
 	public static void main(String[] args) {
+		Optional<String> n = Optional.of("Java");
+		String result = n.orElse("Default");
+		System.out.println(result);
+		//String result1 = n.orElse(getDefaultValue());
+
+		System.out.println("****************");
+		
 		
 		Optional<String> opt = Optional.of("Spring");
 		System.out.println(opt.get());

@@ -11,6 +11,8 @@ public class TestStreamDemo1 {
 
 	public static void main(String[] args) {
 		List<Integer> l1 = Arrays.asList(2, 2, 34, 5, 67, 889, 23, 44, 56);
+		Optional<Integer> max =l1.stream().collect(Collectors.maxBy(Integer::compareTo));
+
 		List<Integer> l = l1.stream().filter(i -> i % 2 == 0).collect(Collectors.toList());
 		l.forEach(System.out::println);
 		long c = l.stream().count();
@@ -49,7 +51,7 @@ public class TestStreamDemo1 {
 
 		// 9. Find maximum number
 		System.out.println("***********");
-		int max = l1.stream().max(Integer::compareTo).get();
+		//int max = l1.stream().max(Integer::compareTo).get();
 		int min = l1.stream().min(Integer::compareTo).get();
 		System.out.println(min);
 		System.out.println(max);
@@ -84,6 +86,10 @@ public class TestStreamDemo1 {
 		//17. Join strings with comma
 		String res=s.stream().collect(Collectors.joining(", "));
 		System.out.println(res);
+		
+		List<String> s2 = Arrays.asList("java", "mysql", "Spring", "html");
+		//String res1=s2.stream().collect(Collectors.groupingBy(s2::));
+		//System.out.println(res1);
 
 
 	}
