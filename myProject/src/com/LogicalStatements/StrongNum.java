@@ -13,8 +13,7 @@ public class StrongNum {
 			int r=n%10;
 			int fact=1;
 			for(int i=1;i<=r;i++) {
-				fact=fact*i;
-				
+				fact=fact*i;	
 			}
 			sum=sum+fact;
 			n=n/10;
